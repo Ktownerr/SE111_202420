@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Keagan Towner" >
+    <meta name="description" content="W2 Demo" >
+    
+    <title>W2 | Demo</title>
+
+    <!--IN DOCUMENT STYLING-->>
+    <style>
+
+        /*for CSS styling of all page content*/
+
+        /*selector {
+            property:value;
+        }
+        */
+
+        div { /*this applies to all divs in the page*/
+            border:1px solid black;
+            margin:10px;/*space outside of border, all 4 sides*/
+            padding:10px;
+        }
+        
+    
+
+        #bio {
+            border:2px solid red;
+            background-color: grey;
+        }
+
+        .bg{
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="wrapper">
+    <!--The content of the page lives - everything we "see"-->
+    <h1 style="border:1px solid blue"> Week 2 - Demo</h1>
+    <h2>attributes, 
+        <b>images</b>, 
+        <i>links</i>
+    </h2>
+
+    <!--NAV BAR-->
+    <div id="nav">
+
+        <!--<A> for linking; both external as well as internal (files + in page)-->
+        <a href="https://www.meca.edu" target="_blank"> Visit MECA!</a> <!--external link-->
+        
+        <br> <!-- used to break the text-->
+
+        <a href="text.txt">Page 2</a>
+
+        <!-- internal JUMP links, inside of page; id "paths"-->
+        <a href="#bio">bio</a>
+        <a href="#schools">schools</a>
+        <a href="#hobby">hobby</a>  
+
+        <br>
+
+        <a href=""> Bottom of page </a>>
+
+    </div>
+
+    <!--Bio Section-->
+    <div id="bio">
+
+        <h2 class="bg"> Bio - About me</h2>
+        
+        <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+        
+
+    </div>
+
+    <!--Schools Section-->
+    <div id="schools">
+        <h2>schools</h2>
+
+        <!--ordered list of schools-->
+        <ol>
+            <li>NEIT</li>
+            <li>MECA - BFA, photography - 2012</li>
+            <li>USM - Additional media</li>
+        </ol>
+
+        <!--images used the <img> tag and require src and alt attributes-->
+        <!--"external images use ABSOLUTE PATHS"-->
+        <img src="https://www.meca.edu/wp-content/uploads/2017/12/Porteous-1.jpg" alt="Porteus Building" width="500">
+
+        <img src="images/meca.jpg" alt="Another photo of a building ive never been to" width="500">
+
+
+    </div>
+
+    <!--Hobby Section-->
+    <div id="hobby">
+
+        <h2>Hobbies!</h2>
+
+        <!-- unorded list of hobbies-->
+        <ul>
+            <li>Watching Movies</li>
+            <li>Listening to pod casts</li>
+            <li>Reading</li>
+            <li>Game of thrones L</li>
+        </ul>
+
+        <img src="images/stormsEnd.jpg" alt="A picture of storms end" width="500">
+
+    </div>
+
+    <div id="footer" class="bg">
+        <p>&copy; 2024, KTRUCHON | SE111 | 202420</p>
+        <a href="#nav">Back to top!</a>
+    </div>
+</div>
+</body>
+</html>
