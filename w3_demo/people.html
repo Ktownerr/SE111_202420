@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Keagan Towner">
+    <meta name="content/description" content="W3 Demo Multi Page">
+
+    <title>W3 | Demo</title>
+
+    <!--IN DOCUMENT STYLING-->
+    <style>
+        /*in here we write css*/
+        div {
+            border:1px green;
+            padding:10px;
+            margin: 10px;
+        }
+
+        #wrapper {
+            background-color: lightgrey;
+        }
+
+        .bg {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        .border{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <!--Wrapper div to hold all content-->
+    <div id="wrapper">
+
+        <!--#Header-->
+        <div id="header" class="border bg">
+
+            <h1 id="title" class="Fancy">Joel Miller</h1>
+            <h2 class="fancy"><i>From Naughty Dog's The last of us'</i></h2>
+
+
+        </div><!--/ #Header-->
+        
+        
+        <!--#Nav-->
+        <div id="nav">
+            <!--Internal Page links - they go to pages withing the site-->
+            <!--Relative file paths-->
+            <a href="index.html">| HOME |</a>
+            <a href="people.html">| PEOPLE |</a>
+            <a href="places.html">| PLACES |</a>
+
+            <br>
+            <!--internal jump links - using fragmets to bring you to a section of the current page based #id-->
+            <a href="#footer">| Jump to footer! |</a>
+
+
+            <br>
+            <!--external links - these go to pages outside of the site-->
+            <!--ABSOLUTE PATHS - include protocol and domain + sub-dir-->
+            <a href="https://www.hbo.com/the-last-of-us" target="_blank">| Visit the official HBO site! |</a> <!--target="_blank" is used to open new site on while keeping old one open-->
+
+
+        </div><!--/ #Nav-->
+       
+       
+        <!--#Page-Content-->
+        <div id="#Page-Content">
+
+            <h2 class="border">| All <u>about</u> Joel Miller |</h2>
+
+
+        </div><!--/ #Page-Content-->
+       
+        <!--#Footer-->
+        <div id="Footer" class="border bg">
+            <a href="#header">JUMP TO TOP</a>
+            <P>&copy;KEAGAN TOWNER | SE111 | 202420</P>
+
+            <!--IMAGE VALIDATION SCREENSHOT - uncomment i validate the page + added image path-->
+            <!--img src=""-->
+
+
+        </div><!--/ #Footer-->
+
+    </div><!--/ #Wrapper-->
+
+
+
+</body>
+</html>
