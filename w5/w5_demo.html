@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W5 | Tables & Forms</title>
+
+    <style>
+        table td {
+            border:1px solid black;
+        }
+    </style>
 </head>
 <body>
     
@@ -42,14 +48,17 @@
 
             <thead><!--column headers for table in form-->
                 <tr>
+                    <!--Left column (labels)-->
                     <td>
-                        <h2>Question</h2>
+                        <h2>Labels</h2>
+                    </td>
+                    <!--right column (inputs)-->
+                    <td>
+                        <h2>Inputs</h2>
                     </td>
 
-                    <td>
-                        <h2>Answer</h2>
-                    </td>
                 </tr>
+
             </thead>
 
             <tbody>
@@ -65,7 +74,7 @@
 
                     <!--second column- INPUT -->
                     <td>
-                        <input type="text" name="fName" id="fName">
+                        <input type="text" name="fName" id="fName" placeholder="Jane"> <!--placeholder gives ghost text-->
                     </td>
 
                 </tr>
@@ -80,7 +89,7 @@
 
                     <!--second column- INPUT -->
                     <td>
-                        <input type="text" name="lName" id="lName">
+                        <input type="text" name="lName" id="lName" placeholder="Doe">
                     </td>
 
                 </tr>
@@ -95,7 +104,7 @@
 
                     <!--second column- INPUT -->
                     <td>
-                        <input type="text" name="age" id="age">
+                        <input type="number" name="age" id="age" min="0" max="150"><!--type attribute is number so we can gather the best information possible-->
                     </td>
 
                 </tr>
@@ -110,7 +119,7 @@
 
                     <!--second column- INPUT -->
                     <td>
-                        <input type="text" id="email" name="email" maxlength="50" placeholder="email@email.com">
+                        <input type="text" id="email" name="email" maxlength="25" placeholder="email@email.com">
                     </td>
 
                 </tr>
