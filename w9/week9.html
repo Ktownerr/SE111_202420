@@ -34,8 +34,21 @@
 	console.log(body)
 	console.dir(body) 
 
+	//for every calue (object) in the array:create a div, give it a unique id and assign it tot the class of "red"; THEN for every property in the object create a <p> to hold the value and a text node to hold the value content; finally add the <p> to the <div then add the <div> to the <body>
 
+		for(let i = 0; 1 < people.length; i++)
+		{
+			//create a div element
+			var tempDiv = document.createElement(`div`)
+			
+			//assign a unique ID to the div; then assign it the "red" class
+			tempDiv.setAttribute(`id`, i)
+			tempDiv.setAttribute(`class`, `red`)
 
+			//add tempDiv to the body element
+			body.appendChild(tempDiv)
+
+		}
 
 
 </script>
