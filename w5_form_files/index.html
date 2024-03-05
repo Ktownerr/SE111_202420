@@ -13,229 +13,201 @@
     <link type="text/css" rel="stylesheet" href="style.css">
 
     <title>Week 5 | Tables and Forms</title>
-    <style>
-
-    </style>
 </head>
 <body>
-    <h1>Birthday Registration Form</h1>
-       <table>
+    <h1>Birthday Party Registration Form</h1>
+    <!--Table Starts-->
+    <table>
+        <!--body starts-->
+        <tbody>
+           <!--Labels-->
             <tr>
                 <td>
                     <h2>Labels</h2>
                 </td>
+                <!--form fields-->
                 <td>
                     <h2>Form Fields</h2>
                 </td>
             </tr>
-            
-            <!--For columns under the headings - this is the left side under labels-->
-            <tbody>
-                <tr>
 
-                    <!--Labels-->
-                    <td>
-                        <label for="gfirst">Parent/Guardians Name:</label>
-                        <label for="glast"></label>
-                    </td>
+
+            <tr>
+                <td>          
+                    <label for="gfirst">Parent / Guardian Name</label>
+
+                    <label for="glast"></label>
+                </td>
+
+                <td>
+                    <input type="text" required maxlength="20" name="gfirst" id="g-first" placeholder="First Name">
+                    <br>     
+                    <input type="text" required maxlength="20" name="glast" id="g-last" placeholder="Last Name">                    
+                </td>
+            </tr>
+
+
+            <!--CHILDS FIRST NAME-->
+            <tr>
+                <td>
+                    <label for="cfirst">Childs First Name</label>
+                </td>
+                <td>
+                    <input type="text" required name="cfirst" id="c-first" placeholder="Childs First Name">
+                </td>
+
+
+            </tr>
+
+            <!--CHILDS AGE-->
+            <tr>
+                <td>
+                    <label for="age">Childs Age</label>
+                </td>
+                <td>
+                    <input type="number" required name="age" value="3">
+                </td>
+
+
+            </tr>
+
+
+<!--START OF DATE-->
+            <tr>
+                <td>
+                    <h2>Date and Time</h2>
+                </td>
+            </tr>
+
+            <!--DATE-->
+            <tr>
+                <td>
+                    <label for="date">Date:</label>
+                </td>
+
+                <td>
+                    <input type="date" required name="date">
+                </td>
+            </tr>
+
+            <!--TIME-->
+            <tr>
+                <td>
+                    <label for="time">Start Time</label>
+                </td>
+
+                <td>
+                    <input type="time" required name="time">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="guests">Number of Guests</label>
+                </td>
+
+                <td>
+                    <input type="number" name="guests" value="5">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <h2>
+                        Food
+                    </h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="size">Size</label>
+                </td>
+
+                <td>
+                    <input type="radio" name="size" value="Sm">Small
+                    <br>
+                    <input type="radio" name="size" value="Md">Medium
+                    <br>
+                    <input type="radio" name="size" value="Lg">Large
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Drinks">Drinks</label>
+                </td>
+
+                <td>
+                    <input type="checkbox" name="Drink1" value="Coke" required>Coke<br>
+                    <input type="checkbox" name="Drink2" value="Sprite" required>Sprite<br>
+                    <input type="checkbox" name="Drink3" value="Fruit Punch" required>Fruit Punch<br>
+                    <input type="checkbox" name="Drink4" value="Lemonade" required>Lemonade<br>
+                    <input type="checkbox" name="Drink5" value="Iced Tea" required>Iced Tea<br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Cake">Cake</label>
+                </td>
+
+                <td>
+                    <select name="cake">
+
+                        <option value="Chocolate">Chocolate</option>
+                        <option value="Vanilla">Vanilla</option>
+                        <option value="Ill bring my own">Ill bring my own</option>
+
+                    </select>
                     
+                </td>
+            </tr>
 
-                    <!--Inputs-->
-                    <td>
-                        <input type="text" name="gfirst" id="gfirst" placeholder="First Name" maxlength="20" required> <!--placeholder gives ghost text-->  
-                        <!--Use <br> here so they stack on top of eachother - these are inline elements-->
-                        <br>
-                        <input type="text" name="glast" id="glast" placeholder="Last Name" maxlength="20" required>                   
-                    </td>
-                    
-                </tr>
-            </tbody>
+            <tr>
+                <td>
+                    <h2>Decorations</h2>
+                </td>
+            </tr>
 
-            
-            <!--Childs First Name Labels-->
-            <tbody>
-                <tr>
-                    <td>
-                        <label for="cfirst">Childs First Name:</label>
-                    </td>
-                    
-                    
-                    <!--Childs First Name Labels-->
-                    <td>
-                        <input type="text" name="cfirst" placeholder="Childs First Name" Required>
-                    </td>
-                </tr>
-            </tbody>
+            <tr>
+                <td>
+                    <label for="Colors">Color Scheme</label>
+                </td>
 
-            <tbody>
-                <tr>
-                    <td>
-                        <label for="age">Childs Age:</label>
-                    </td>
-                    
-                    
-                    <!--Childs First Name Labels-->
-                    <td>
-                        <input type="number" name="age" value="3" Required min="0" max="150">
-                    </td>
-                </tr>
-            </tbody>
+                <td>
+                    <input type="color" name="color">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="comments">Additional Comments</label>
+                </td>
+
+                <td>
+                    <textarea name="comments" placeholder="Please leave any additional comments"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <!--Nothing here to leave left spot empty-->
+                </td>
 
 
-            <!--Date and Time-->
-            <tbody>
-                <tr>
-                    <td>
-                        <h2>
-                            Date and Time
-                        </h2>
-                    </td>
-                </tr>
+                <td>
+                    <input type="submit" value="submit">
+                </td>
+            </tr>
 
-                <!--Date-->
-                <tr>
-                    <td>
-                        <label for="date">Date:</label>
-                    </td>
-
-                    <td>
-                        <input type="date" name="date" required>
-                    </td>
-                </tr>
-
-                <!--Time-->
-                <tr>
-                    <td>
-                        <label for="Time">Time</label>
-                    </td>
-
-                    <td>
-                        <input type="Time" name="Time" required>
-                    </td>
-                </tr>
-
-                <!--Guests-->
-                <tr>
-                    <td>
-                        <label for="guests">Number of Guests</label>
-                    </td>
-
-                    <td>
-                        <input type="number" name="guests" value="5" required>
-                    </td>
-                </tr>
-            </tbody>
-
-            <!--Food-->
-            <tbody>
-                <tr>
-                    <td>
-                        <h2>
-                            Food
-                        </h2>
-                    </td>
-                </tr>
-                <!--Size-->
-                <tr>
-                    <td>
-                        <label for="Size">Size</label>
-                    </td>
-
-                    <td>
-                        <input type="radio" name="size" value="Sm">Small
-                        <br>
-                        <input type="radio" name="size" value="Md">Medium
-                        <br>
-                        <input type="radio" name="size" value="Lg">Large
-                    </td>
-                </tr>
-
-                <!--Drinks-->
-                <tr>
-                    <td>
-                        <label for="Drinks">Drinks</label>
-                    </td>
-
-                    <td>
-                        <input type="checkbox" name="Drink1" value="Coke" required>Coke<br>
-                        <input type="checkbox" name="Drink2" value="Sprite" required>Sprite<br>
-                        <input type="checkbox" name="Drink3" value="Fruit Punch" required>Fruit Punch<br>
-                        <input type="checkbox" name="Drink4" value="Lemonade" required>Lemonade<br>
-                        <input type="checkbox" name="Drink5" value="Iced Tea" required>Iced Tea<br>
-                    </td>
-                </tr>
-
-                <!--Cake-->
-                <tr>
-                    <td>
-                        <label for="Cake">Cake</label>
-                    </td>
-
-                    <td>
-                        <select name="cake">
-
-                            <option value="Chocolate">Chocolate</option>
-                            <option value="Vanilla">Vanilla</option>
-                            <option value="Ill bring my own">Ill bring my own</option>
-
-                        </select>
-                        
-                    </td>
-                </tr>
-
-            </tbody>
-
-            <!--Decorations-->
-            <tbody>
-                <tr>
-                    <td>
-                        <h2>Decorations</h2>
-                    </td>
-                </tr>
-
-                <!--Color scheme-->
-                <tr>
-                    <td>
-                        <label for="Colors">Color Scheme</label>
-                    </td>
-
-                    <td>
-                        <input type="color" name="color">
-                    </td>
-                </tr>
+        <!--body ends-->
+        </tbody>
+    <!--table ends-->
+    </table>
 
 
-                <!--Additional Comments-->
-                <tr>
-                    <td>
-                        <label for="comments">Additional Comments</label>
-                    </td>
-
-                    <td>
-                        <textarea name="comments" placeholder="Please leave any additional comments"></textarea>
-                    </td>
-                </tr>
-
-                <!--Submit Button-->
-                <tr>
-                    <td>
-                        <!--Nothing here to leave left spot empty-->
-                    </td>
 
 
-                    <td>
-                        <input type="submit" value="submit">
-                    </td>
-                </tr>
-                
-            </tbody>
-       </table>
-<hr>
-<img src="images/Screenshot (1).png" width="500" alt="VALIDATION SCREENSHOT">
-<hr>
 
-
-<P>&copy;KEAGAN TOWNER | SE111 | 202420</P>
-    
 </body>
-</html>
