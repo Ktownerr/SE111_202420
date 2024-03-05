@@ -4,7 +4,16 @@
 <meta charset="utf-8">
 <title>Week 2 Files</title>
 <style type="text/css">
-	.border{border:1px solid black;}
+	.red {
+
+border:1px solid red;
+
+margin-bottom:10px;
+
+min-height:20px;
+
+ }
+
 </style>
 </head>
 
@@ -42,9 +51,23 @@
 			var tempDiv = document.createElement(`div`)
 			
 			//assign a unique ID to the div; then assign it the "red" class
-			tempDiv.setAttribute(`id`, i)
+			tempDiv.setAttribute(`id`, people[i].first)
 			tempDiv.setAttribute(`class`, `red`)
 
+			for (let key in people[i])
+			{
+				
+				var p = document.createElement(`p`)
+				var text = document.createTextNode(people[i][key])
+
+				//add the text to the p
+				p.appendChild(text)
+				tempDiv.appendChild(p)
+			}
+
+			
+
+			//FINALLY add the <p to the <div, then add the <div to the <body 
 			//add tempDiv to the body element
 			body.appendChild(tempDiv)
 
