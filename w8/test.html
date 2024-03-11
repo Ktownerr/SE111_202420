@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="author" content="- YOUR NAME HERE -">
+    <meta name="author" content="- KEAGAN TOWNER WOO HOO -">
     <meta name="description" content="W8 Demo - JS Arrays & Objects!">
 
     <title>W8 | JS Arrays & Objects</title>
@@ -155,7 +155,7 @@
         <!--footer for final notes of game site-->
         <div id="footer">
 
-            <p>&copy; -YOUR NAME GOES HERE- | SE111 | 202420</p>
+            <p>&copy; -Keagan Towner- | SE111 | 202420</p>
             <h6><a href="../../index.html">KT's Repo Index</a></h6> <!--keep this KT's repo link ;] yours goes in the #nav aread-->
 
             <!--screeshot of validation below-->
@@ -203,30 +203,24 @@
         form.addEventListener('submit', handleForm)
 
 
-    /*
-        //below creates the event listener to run the basicInfo function, which runs when the submit button is clicked
+    
         submit.addEventListener(`click`, basicInfo)
 
-        //build a function for the event listener you just created
-        //event based functions require the event parameter (event/evnt/ev/e)
         function basicInfo(e)
         {
-            //var pName = document.getElementById(`player`).value
+            var pName = document.getElementById(`player`).value
             console.log(pName.value)
             console.log(name)
             console.log(pName)
 
-            //write the player's name (name____) to the resultBox element (resultBox)
+            
             resultBox.innerHTML += `<p> ${pName.value} </p>`
 
-        }//basicIfo() CLOSE
+        }
 
-    */
+    
 
 
-        //[PART 2]-INTRO TO JS ARRAYS & OBJECTS-------------------------------------------------------------------------
-        //-------ARRAYS--------------------
-        //-------create a new array of names and populate it!
 
         var people = [
             "Katie",
@@ -236,83 +230,60 @@
             "Jordan"
         ]
 
-        //using the array name by itself describes the WHOLE SET of values
         console.log(people)
 
-        //array name + KEY [index] describes ONE VALUE 
-        console.log(people[0]) //to see a different value, change the [#]
+        console.log(people[0]) 
 
-        //everything in JS is an object, so arrays take on properties whenever built, like the .length - # of values stored to the array
         console.log(`The 'people' array has: ${people.length} values`)
 
-        //------ADDING VALUES TO ARRAYS---------
 
-        //add a name to the array - requires knowing next index #
         people[5] = "Tim"
 
-        //add a name to the array - based on the length, which reps next avail. index
         people[people.length] = "Scott"
 
-        //add a name to the array - using the .push() method avail to arrays
-        people.push("Jim")   //.append() in Python
+        people.push("Jim")   
 
         console.log(`Now, the 'people' array has: ${people.length} values\n${people}`)
 
 
-        //-------PARALLEL ARRAYS-----------
-        //-------Building a parallel array to people array that holds fave animals
 
         var faveAnimals = [
-            "elephant",     //this is the [0] value, meaning it belongs to people[0]
+            "elephant",    
             "dog",
             "birds",
             "jaguar",
-            "panda bear",   //this is the [4] value, meaning it belongs to people[4]
+            "panda bear",   
             "meerkat",
             "giraffe",
             "duck"
         ]
 
 
-        //------PROCESSING ARRAYS - use a standard for loop to batch process (do the same thing to every value in the array)
 
-        //standard for loop - best used for standard arrays - arrays with int index
         for (let index = 0; index < people.length; index++)
         {
-            //BLOCK SCOPE: uses the let declarative; the variable/name is onlhy accessible within the { code block }
 
-            //index++ - post-incrementation, adds +1 to index after each loop iteration
 
-            //show the parallel nature of the arrays - display each name value with its corresponding favorite animal
             console.log(`${people[index]}'s fave animal is a(n): ${faveAnimals[index]}`)
 
-        }//end of batch process of parallel arrays for loop
+        }
 
 
-        //-------ASSOCIATIVE ARRAYS---------
-        //arrays with string index instead of integer index
+        var classTimes = []  
 
-        var classTimes = [] //making an empty array 
-
-        //developer must hand populate each string index with a unique string key
         classTimes["early"] = "7:45A"
         classTimes["beter"] = "11:25A"
         classTimes["afternoon"] = "3:05P"
         classTimes["late"] = "5:45P"
 
-        //for in loops are best used for associative arrays and other string-based keys, like properties in objects
         for (let key in classTimes)
         {
-            //"for every string key in the classTimes array"
 
-            //display each value stored at each key in the array, with its key as a label
             console.log(`Class Times - ${key}: ${classTimes[key]}`)
         }
 
-        //-------OBJECTS--------------------
+//kts dogs have funny names
 
-        //create a pet1 object - we will resue the base to create several objects
-        //properties can be reutilized across objects
         var pet1 = {
             title: "Sir Captain",
             first: "Jackson Daniel",
@@ -323,91 +294,69 @@
             hasSiblings: true,
             numSiblings: 2,
             faveToy: "KT's plants",
-            //below is a function stored to an object ie a METHOD build :D
             infoAlert: function() {
                 alert(`
                     ${this.title} ${this.first} ${this.middle} ${this.last} ${this.suffix}
                 `)
             },
-            //'this' keyword references the object you are assigning data to!
 
             nameSiblings: ["George", "Marlowe"]
 
-        }//original object build close
+        }
 
-
-        //access the entire object - use name only 
         console.log(pet1)
 
-        //access a value of the object - use objectName.property where value is assigned
         console.log(pet1.first)
 
-        //access how many siblings pet1 has
         console.log(pet1.nameSiblings.length)
 
-        //add a property to the object
         pet1.newProperty = "Jack"
         console.log(pet1)
 
-        //run pet1's infoAlert() method (function call!)
-        pet1.infoAlert() //call the function!
-
+        pet1.infoAlert() 
         var pet2 = {
             title: "Mr.",
             first: "George",
             middle: "Bulleit",
-            last: "Wayne",  //cause BATMAN EARS
+            last: "Wayne", 
             age: 9,
             hasSiblings: true,
             numSiblings: 3,
             faveToy: "the Nylo Bone",
-            //below is a function stored to an object ie a METHOD build :D
+
             infoAlert: function() {
                 alert(`
                     ${this.title} ${this.first} ${this.middle} ${this.last}
                 `)
             },
-            //'this' keyword references the object you are assigning data to!
 
             nameSiblings: ["Jack", "Marlowe", "Stevie"]
 
-        }//original object build close
+        }
 
-        //call pet2's infoAlert
         pet2.infoAlert()
 
-        //process through an object to see all of its values! 
-        //use a for in loop because properties are string-based keys
         for (let key in pet2)
         {
             console.log(`${key.toUpperCase()}: ${pet2[key]}`)
-        }//close of for loop processing object properties and values
+        }
 
 
-        //-------ARRAYS POPULATED WITH OBJECTS----------
 
-        //create an empty array 
         var pets = []
 
-        //add objects to the array - there are 3 different ways we have covered :]
         pets.push(pet1)
         pets.push(pet2)
-        //could also populate w/ more than one at once: pets.push(pet1, pet2)
 
         console.log(pets)
 
-        //[PART 3]-PUTTING IT ALL TOGETHER---------------------------------------------
 
-        //add event listener to submit
         submit.addEventListener("click", writeCharacter)
 
-        //create an empty array to hold char info - it will be made before the function
         var charInfo = []
 
         function writeCharacter(event)
         {
-            //get values from the form elements
-            //LOCAL VARIABLE declaration below: these names are only accessible in this function
             var player = pName.value
             var playClass = pClass.value
             var playLevel = Number(pLevel.value)
@@ -452,22 +401,19 @@
 
             for (let i = 0; i < charInfo.length; i++)
             {
-               
+
                 for (let key in charInfo[i])
                 {
-                    //charInfo[i] --> an object within the array!
                     resultContent += `<p><b>${key.toUpperCase()}</b>: ${charInfo[i][key]}</p>`
                 }
 
-                //below adds a horizontal rule between each char written to the page
                 resultContent += `<hr>`
 
             }
 
-            //reassign resultBox.innerHTML to be the full resultContent value
             resultBox.innerHTML = resultContent
 
-        }//writeCharacter() CLOSE
+        }
 
     
 
